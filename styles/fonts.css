@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Play";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/Play-Regular.woff") format("woff"), url("../fonts/Play-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Black Ops One";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/BlackOpsOne-Regular.woff") format("woff"), url("../fonts/BlackOpsOne-Regular.ttf") format("truetype");
+}

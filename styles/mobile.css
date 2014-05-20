@@ -1,0 +1,92 @@
+#game {
+    width: 100%;
+    height: 100%;
+}
+
+/* use a smaller base size for small screens */
+@media (max-device-width: 480px) and (orientation: portrait),
+    @media (max-device-width: 640px) and (orientation: landscape) {
+        #game {
+            font-size: 32px;
+        }
+    }
+    /* use a bigger base size for ipad and tablets */
+    @media (min-device-width: 768px) and (orientation: portrait),
+        @media (min-device-width: 1024px) and (orientation: landscape) {
+            #game {
+                font-size: 64px;
+            }
+        }
+
+        /* smartphones landscape */
+        @media (orientation: landscape) {
+            #splash-screen,
+            #main-menu {
+                font-size: 1.0em;
+                padding-top: 0.75em;
+            }
+
+            ul.menu li {
+                display: inline-block;
+                margin: 0;
+            }
+
+            ul.menu li button {
+                margin: 0.5em;
+                font-size: 0.5em;
+            }
+        }
+
+        /* small screens landscape */
+        @media (orientation: landscape) and (max-device-width: 480px) {
+            ul.menu li button {
+                font-size: 0.4em;
+            }
+        }
+
+        /* tablets landscape */
+        @media (orientation: landscape) and (min-device-width: 768px) {
+            #splash-screen,
+            #main-menu {
+                padding-top: 1.5em;
+            }
+        }
+
+        @media (orientation: landscape) {
+            #game-screen .game-board {
+                float: left;
+            }
+
+            #game-screen .game-info {
+                width: auto;
+                height: 2em;
+                white-space: nowrap;
+            }
+
+            #game-screen .game-info label {
+                font-size: 0.5em;
+            }
+
+            #game-screen .game-info .score {
+                float: left;
+                clear: both;
+            }
+
+            #game-screen .time {
+                margin: 0;
+                position: absolute;
+                top: 2.0em;
+                left: 8.7em;
+                width: 5em;
+                /* vendor specific transforms */
+                -webkit-transform: rotate(-90deg) translate(-2.5em, -2.5em);
+                -moz-transform: rotate(-90deg) translate(-2.5em, -2.5em);
+                -ms-transform: rotate(-90deg) translate(-2.5em, -2.5em);
+                /* standard transform */
+                transform: rotate(-90deg) translate(-2.5em, -2.5em);
+            }
+
+            #game-screen footer button.exit {
+                float: right;
+            }
+        }
