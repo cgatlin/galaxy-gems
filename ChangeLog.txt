@@ -1,0 +1,15 @@
+**v1.0.1**
++Editted display postion for web
++Editted diplay for mobile due to changes in web postions
+
+%Known Bugs%
+-In landscape for mobile unable to select jewels on bottom row
+
+
+
+***v1.0.0***
+End product from html5 games by jacob seidelin
+
++Editted Tilte
++Editted Font
++Custom jewels.dae
