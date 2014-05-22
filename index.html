@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="en-us">
+<html lang="en-us" manifest="manifest.appcache">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
     <title>Galaxy Gems</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
 
     <link rel="apple-touch-icon-precomposed"
           href="images/ios-icon.png"/>
@@ -36,7 +37,7 @@
             {
                 jewel.load("scripts/screen.splash.js", jewel.setup);
                 jewel.load("scripts/screen.main-menu.js");
-                if (false)
+                if (jewel.hasWebWorkers())
                 {
                     jewel.preload("scripts/board.worker.js");
                     jewel.load("scripts/board.worker-interface.js");

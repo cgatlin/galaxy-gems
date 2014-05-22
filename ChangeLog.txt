@@ -2,8 +2,9 @@
 +Editted display postion for web
 +Editted diplay for mobile due to changes in web postions
 
-%Known Bugs%
+%Known Bugs / Things need fixing%
 -In landscape for mobile unable to select jewels on bottom row
+-In landscape Hiscore Page gets cut off
 
 
 
