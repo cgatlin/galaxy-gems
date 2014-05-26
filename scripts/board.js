@@ -49,7 +49,7 @@ jewel.board = (function ()
 
     function randomJewel()
     {
-        return Math.floor(Math.random() * numJewelTypes);
+        return Math.floor(Math.random() * numJewelTypes)+':N';
     }
 
     function getJewel(x, y)

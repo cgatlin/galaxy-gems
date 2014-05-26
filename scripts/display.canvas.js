@@ -127,7 +127,8 @@ jewel.display = (function ()
         {
             for (y = 0; y < rows; y++)
             {
-                drawJewel(jewels[x][y], x, y);
+                 var gem = jewels[x][y].split(":");
+                drawJewel(gem[0], x, y);
             }
         }
         callback();
@@ -151,7 +152,8 @@ jewel.display = (function ()
             ctx.save();
             ctx.globalCompositeOperation = "lighter";
             ctx.globalAlpha = 0.8 * t1;
-            drawJewel(jewels[x][y], x, y);
+             var gem = jewels[x][y].split(":");
+                drawJewel(gem[0], x, y);
             ctx.restore();
         }
         ctx.save();
@@ -324,7 +326,8 @@ jewel.display = (function ()
                     if (x >= 0 && x < cols)
                     { // boundary check
                         clearJewel(x, y);
-                        drawJewel(jewels[x][y], x, y);
+                         var gem = jewels[x][y].split(":");
+                drawJewel(gem[0], x, y);
                     }
                 }
             },
@@ -338,7 +341,8 @@ jewel.display = (function ()
                 {
                     if (x >= 0 && x < cols)
                     { // boundary check
-                        drawJewel(jewels[x][y], x, y, 1.1);
+                         var gem = jewels[x][y].split(":");
+                drawJewel(gem[0], x, y,1.1);
                     }
                 }
                 ctx.restore();
@@ -354,7 +358,8 @@ jewel.display = (function ()
             var x = cursor.x,
                 y = cursor.y;
             clearJewel(x, y);
-            drawJewel(jewels[x][y], x, y);
+            var gem = jewels[x][y].split(":");
+                drawJewel(gem[0], x, y);
         }
     }
 
@@ -410,8 +415,10 @@ jewel.display = (function ()
         {
             for (y = 0; y < rows; y++)
             {
+                 var gem = jewels[x][y].split(":");
+
                 piece = {
-                    type: jewels[x][y],
+                    type: gem[0],
                     pos: {
                         x: x + 0.5,
                         y: y + 0.5

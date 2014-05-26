@@ -75,6 +75,7 @@ jewel.display = (function ()
 
             for (var j = 0; j < jewels.length; j++)
             {
+
                 drawJewel(jewels[j], i);
             }
 
@@ -93,8 +94,9 @@ jewel.display = (function ()
 
     function drawJewel(jwl, type)
     {
+        var gem = jwl.type.split(":");
 
-        if (jwl.type === type)
+        if (gem[0] == type)
         {
             var webgl = jewel.webgl,
                 x = jwl.x - cols / 2 + 0.5,  // make position
@@ -125,7 +127,7 @@ jewel.display = (function ()
             }
 
             gl.uniform1f(uScale, scale);
-            gl.uniform3fv(uColor, colors[jwl.type]);
+            gl.uniform3fv(uColor, colors[gem[0]]);
 
             gl.cullFace(gl.FRONT);
             gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_SHORT, 0);
